@@ -23,6 +23,10 @@ meteor add reactjs:react
 meteor add izzilab:material-ui
 ```
 
+##Demo
+Simple Todos App: http://material-ui.meteor.com
+Source: https://github.com/mrphu3074/react-material-ui-examples
+
 ##Contributing
 Any contribtion is welcome. please fork the repository make any changes and submit a pull request.
 And i need your help:
