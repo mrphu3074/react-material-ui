@@ -1,6 +1,6 @@
 Package.describe({
     name: 'izzilab:material-ui',
-    version: '0.0.6',
+    version: '0.0.8',
     // Brief, one-line summary of the package.
     summary: 'React Material ui ported from http://material-ui.com',
     // URL to the Git repository containing the source code for this package.
@@ -11,20 +11,20 @@ Package.describe({
 });
 
 var MUI_VERSION = '0.10.1';
+var EXTERNALIFY_VERSION = "0.1.0";
 Npm.depends({
+    'externalify': EXTERNALIFY_VERSION,
     'material-ui': MUI_VERSION
-})
+});
 
 Package.onUse(function(api){
-    var both = ['client', 'server'];
+    api.use(['react@0.1.3'], 'client');
     api.use(['cosmos:browserify@0.3.0'], 'client');
-    api.use(['tomesch:react-jsx@0.0.1'], both);
-    api.imply('tomesch:react-jsx');
 
-    api.addFiles('client.browserify.js', 'client');
-    api.export(["React", "MUI"], 'client');
-    // ReactMeteor.js is lib from official reactjs:react
-    // https://github.com/reactjs/react-meteor
-    api.addFiles("ReactMeteor.js", ["server", "client"]);
-    api.export("ReactMeteor", ["server", "client"]);
+    api.addFiles([
+        'client.browserify.options.json',
+        'client.browserify.js'
+    ], 'client');
+
+    api.export(["mui", "MUI", "injectTapEventPlugin"], 'client');
 });

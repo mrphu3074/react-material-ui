@@ -3,10 +3,6 @@
 ## Introduction
 This package ported from http://material-ui.com (a React Components)
 
-## New change in this version 0.0.4
-- Big changed in this version, i just created a wrapper to support all features from http://material-ui.com (ver 0.9.1).
-- Support ***ReactMeteor*** from `reactjs:react`
-- My wrong in old version is modified them to compatable with `reactjs:react`
 
 ## Documentation
 - ###<a href="http://material-ui.com/#/components/appbar">Material UI</a>
@@ -30,6 +26,7 @@ And i need your help:
 ## Change logs
 - Updated to MUI 0.9.2
 - Updated to MUI 0.10.1
+- 0.0.8 - Updated supported package `meteor add react` (becoming package official)
 
 ---
 # NOTICE
