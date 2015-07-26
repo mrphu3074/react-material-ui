@@ -24,6 +24,7 @@ Package.onUse(function(api){
     api.use(['cosmos:browserify@0.5.0'], 'client');
 
     api.addFiles([
+        'window.react.js',
         'client.browserify.options.json',
         'client.browserify.js'
     ], 'client');
