@@ -56,6 +56,7 @@ if (Meteor.isClient) {
 Simple Todos App: http://material-ui.meteor.com
 
 ## CHANGELOG
+- 2015-08-11 : upgrade MUI to 0.10.4 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0104)
 - 2015-08-02 : upgrade MUI to 0.10.2 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0102)
 
 *Note: This is an old demo with bugs and performance problems. The code is also not updated to use the official react package yet. A new version will follow soon.*
