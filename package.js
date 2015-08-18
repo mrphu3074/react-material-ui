@@ -20,7 +20,7 @@ Npm.depends({
 });
 
 Package.onUse(function(api){
-    api.use(['react@0.1.3'], 'client');
+    api.use(['react@0.1.9'], 'client');
     api.use(['cosmos:browserify@0.5.0'], 'client');
 
     api.addFiles([
