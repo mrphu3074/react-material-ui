@@ -1,6 +1,6 @@
 Package.describe({
     name: 'izzilab:material-ui',
-    version: '0.1.2',
+    version: '0.1.5',
     // Brief, one-line summary of the package.
     summary: 'Material-UI using official React package',
     // URL to the Git repository containing the source code for this package.
@@ -20,14 +20,13 @@ Npm.depends({
 });
 
 Package.onUse(function(api){
-    api.use(['react@0.1.9'], 'client');
-    api.use(['cosmos:browserify@0.5.0'], 'client');
+    api.use(['react@0.1.7', 'cosmos:browserify@0.5.0']);
 
     api.addFiles([
-        'window.react.js',
-        'client.browserify.options.json',
-        'client.browserify.js'
-    ], 'client');
+        'mui.browserify.options.json',
+        'mui.browserify.js'
+    ]);
 
-    api.export(["MUI", "injectTapEventPlugin"], 'client');
+    api.addFiles('window.react.js', 'client');
+    api.export(["MUI", "injectTapEventPlugin"]);
 });
