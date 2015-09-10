@@ -55,6 +55,7 @@ if (Meteor.isClient) {
 ```
 
 ## CHANGELOG
+- 2015-09-08 : upgrade MUI to 0.11.0 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0110)
 - 2015-08-23 : Fixed bugs Menu, MenuItem, MenuDivider And Supported SSR.
 - 2015-08-11 : upgrade MUI to 0.10.4 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0104)
 - 2015-08-02 : upgrade MUI to 0.10.2 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0102)
