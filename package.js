@@ -1,6 +1,6 @@
 Package.describe({
     name: 'izzilab:material-ui',
-    version: '0.1.6',
+    version: '0.1.7',
     // Brief, one-line summary of the package.
     summary: 'Material-UI using official React package',
     // URL to the Git repository containing the source code for this package.
@@ -10,17 +10,16 @@ Package.describe({
     documentation: 'README.md'
 });
 
-var MUI_VERSION = '0.11.0';
+var MUI_VERSION = '0.12.1';
 var EXTERNALIFY_VERSION = "0.1.0";
 var TAP_EVENT_PLUGIN_VERSION = '0.1.7';
 Npm.depends({
     'externalify': EXTERNALIFY_VERSION,
-    'material-ui': MUI_VERSION,
-    'react-tap-event-plugin': TAP_EVENT_PLUGIN_VERSION
+    'material-ui': MUI_VERSION
 });
 
 Package.onUse(function(api){
-    api.use(['react@0.1.7', 'cosmos:browserify@0.5.0']);
+    api.use(['react@0.1.13', 'cosmos:browserify@0.7.0']);
 
     api.addFiles([
         'mui.browserify.options.json',

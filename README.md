@@ -1,6 +1,7 @@
 ### `meteor add izzilab:material-ui`
 
-### From version 0.1.5, we supported SSR 
+### From version 0.1.7, we upgrade to MUI 0.12.1 and it have breaking changes
+#### [CHANGELOG 0.12.0 and 0.12.1](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0120)
 
 ## Introduction
 
@@ -19,42 +20,57 @@ Some clicks (like DatePicker) only work when you have run `injectTapEventPlugin(
 Here's some example code to get you started:
 
 ```
-// client/app.jsx
-var ThemeManager = new MUI.Styles.ThemeManager();
+
+//app.jsx
 injectTapEventPlugin();
 
-var { DatePicker, TextField } = MUI;
+var {
+    AppCanvas,
+    AppBar,
+    Styles,
+    RaisedButton,
+    DatePicker
+    } = MUI;
+var { ThemeManager, LightRawTheme } = Styles;
 
 var App = React.createClass({
     childContextTypes: {
         muiTheme: React.PropTypes.object
     },
 
-    getChildContext: function() {
+    getChildContext() {
         return {
-            muiTheme: ThemeManager.getCurrentTheme()
+            muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
         };
     },
 
-    render: function() {
+    render: function () {
         return (
-            <div>
-                <DatePicker hintText="Landscape Dialog" mode="landscape"/>
-                <TextField hintText="Hint Text" />
-            </div>
+            <AppCanvas>
+                <AppBar title="izziLab"/>
+
+                <div style={{padding: '80px',}}>
+                    <RaisedButton primary={true} label="Tap" />
+                    <br/>
+                    <DatePicker hintText="Portrait Dialog" />
+                    <br/>
+                    <DatePicker
+                        hintText="Landscape Dialog"
+                        mode="landscape"/>
+                </div>
+            </AppCanvas>
         );
     }
 });
 
 if (Meteor.isClient) {
-    Meteor.startup(function () {
-        $(document.body).html("<div id='container'></div>");
-        React.render(<App />, document.getElementById("container"));
-    });
+    Meteor.startup(() => React.render(<App/>, document.body));
 }
+
 ```
 
 ## CHANGELOG
+- 2015-09-30 : upgrade MUI to 0.12.1 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0120)
 - 2015-09-08 : upgrade MUI to 0.11.0 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0110)
 - 2015-08-23 : Fixed bugs Menu, MenuItem, MenuDivider And Supported SSR.
 - 2015-08-11 : upgrade MUI to 0.10.4 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0104)
