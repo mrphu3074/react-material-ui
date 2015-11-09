@@ -1,7 +1,23 @@
 ### `meteor add izzilab:material-ui`
+### Version 0.2.X, MUI imported SvgIcons
+```
+	let {SvgIcons} = MUI.Libs;
+	...
+	render() {
+			let RightIcon = <SvgIcons.NavigationClose />
+            return (
+                <AppCanvas>
+                    <AppBar title="izziLab" iconElementRight={RightIcon} />
+                </AppCanvas>
+            );
+        }
+```
 
-### From version 0.1.7, we upgrade to MUI 0.12.1 and it have breaking changes
-#### [CHANGELOG 0.12.0 and 0.12.1](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0120)
+### From version 0.1.9, we upgrade to MUI 0.13.1 and react to 0.14.X it have breaking changes
+#### [Change log MUI 0.13.1](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0131)
+#### [Change log React and ReactDOM 0.14.x](https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html)
+
+
 
 ## Introduction
 
@@ -20,7 +36,6 @@ Some clicks (like DatePicker) only work when you have run `injectTapEventPlugin(
 Here's some example code to get you started:
 
 ```
-
 //app.jsx
 injectTapEventPlugin();
 
@@ -50,9 +65,9 @@ var App = React.createClass({
                 <AppBar title="izziLab"/>
 
                 <div style={{padding: '80px',}}>
-                    <RaisedButton primary={true} label="Tap" />
+                    <RaisedButton primary={true} label="Tap"/>
                     <br/>
-                    <DatePicker hintText="Portrait Dialog" />
+                    <DatePicker hintText="Portrait Dialog"/>
                     <br/>
                     <DatePicker
                         hintText="Landscape Dialog"
@@ -64,12 +79,16 @@ var App = React.createClass({
 });
 
 if (Meteor.isClient) {
-    Meteor.startup(() => React.render(<App/>, document.body));
+    Meteor.startup(() => {
+        ReactDOM.render(<App/>, document.getElementById('react-root'));
+    });
 }
 
 ```
 
 ## CHANGELOG
+- 2015-11-09 : fixed SSR with MUI 0.13.1
+- 2015-11-01 : upgrade MUI to 0.13.1 and react to 0.14.1 [Change log 0.13.1](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0131)
 - 2015-09-30 : upgrade MUI to 0.12.1 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0120)
 - 2015-09-08 : upgrade MUI to 0.11.0 (https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0110)
 - 2015-08-23 : Fixed bugs Menu, MenuItem, MenuDivider And Supported SSR.
