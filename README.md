@@ -87,6 +87,7 @@ if (Meteor.isClient) {
 ```
 
 ## CHANGELOG
+- 2015-12-27 : upgrade to MUI 0.14.0 and react 0.14.3 [Change log 0.14.0](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0140)
 - 2015-11-30 : upgrade to MUI 0.13.4 [Change log 0.13.4](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0134)
 - 2015-11-09 : fixed SSR with MUI 0.13.1
 - 2015-11-01 : upgrade MUI to 0.13.1 and react to 0.14.1 [Change log 0.13.1](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0131)
