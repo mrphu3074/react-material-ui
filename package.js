@@ -10,7 +10,7 @@ Package.describe({
     documentation: 'README.md'
 });
 
-var MUI_VERSION = '0.14.3';
+var MUI_VERSION = '0.15.4';
 var EXTERNALIFY_VERSION = "0.1.0";
 Npm.depends({
     'externalify': EXTERNALIFY_VERSION,

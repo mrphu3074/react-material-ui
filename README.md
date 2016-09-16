@@ -87,6 +87,8 @@ if (Meteor.isClient) {
 ```
 
 ## CHANGELOG
+- 2016-09-15 : upgrade to MUI 0.15.4
+[Change log 0.14.3](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0143)
 - 2016-01-30 : upgrade to MUI 0.14.3 and react-tap-event-plugin to 0.2.2 [Change log 0.14.3](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0143)
 - 2015-12-27 : upgrade to MUI 0.14.0 and react 0.14.3 [Change log 0.14.0](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0140)
 - 2015-11-30 : upgrade to MUI 0.13.4 [Change log 0.13.4](https://github.com/callemall/material-ui/blob/master/CHANGELOG.md#0134)
